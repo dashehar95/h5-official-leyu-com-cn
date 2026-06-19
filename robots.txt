@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dashehar95.github.io/h5-official-leyu-com-cn/sitemap.xml

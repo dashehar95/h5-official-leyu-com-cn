@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>从日常到延伸 · 水果机</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f3f0ea;
+            color: #1e1e1e;
+            line-height: 1.7;
+        }
+
+        .header {
+            background: linear-gradient(145deg, #1b2b2b 0%, #122020 100%);
+            padding: 3.5rem 1.5rem 2.8rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(243, 210, 110, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .header h1 {
+            margin: 0 0 0.5rem;
+            font-size: 2.6rem;
+            font-weight: 360;
+            letter-spacing: 0.04em;
+            color: #e6dfce;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .header .lead {
+            max-width: 540px;
+            margin: 0.75rem auto 0;
+            color: #bfb6a1;
+            font-size: 1.05rem;
+            font-weight: 300;
+            line-height: 1.6;
+            padding: 0 0.5rem;
+        }
+
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.2rem 1.5rem 4rem;
+        }
+
+        .story-section {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+            padding: 2.2rem 2.4rem;
+            margin-bottom: 2rem;
+        }
+
+        .story-section p {
+            margin: 0 0 1.3rem;
+            font-size: 1rem;
+            color: #2e2e2e;
+        }
+
+        .story-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.8rem 0 0.8rem;
+        }
+
+        .feature-card {
+            background: #f9f7f2;
+            border-radius: 16px;
+            padding: 1.1rem 1.3rem;
+            transition: background 0.2s ease;
+        }
+
+        .feature-card:hover {
+            background: #f0ede4;
+        }
+
+        .feature-card strong {
+            display: block;
+            font-weight: 500;
+            color: #2a4a4a;
+            margin-bottom: 0.3rem;
+            font-size: 1.05rem;
+        }
+
+        .feature-card span {
+            font-size: 0.92rem;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .example-box {
+            background: #f6f3eb;
+            border-left: 4px solid #8a9b6e;
+            padding: 1.2rem 1.6rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.6rem 0 1rem;
+        }
+
+        .example-box p {
+            margin: 0.3rem 0;
+            font-size: 0.95rem;
+        }
+
+        .faq-summary {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 1.8rem;
+            margin-top: 1.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e2dcd0;
+        }
+
+        .faq-item {
+            flex: 1 1 200px;
+        }
+
+        .faq-item .q {
+            font-weight: 500;
+            font-size: 0.94rem;
+            color: #1e3b3b;
+            margin-bottom: 0.15rem;
+        }
+
+        .faq-item .a {
+            font-size: 0.88rem;
+            color: #555;
+        }
+
+        a {
+            color: #35635b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #b6c9b4;
+            transition: color 0.2s, text-decoration-color 0.2s;
+        }
+
+        a:hover {
+            color: #1f443f;
+            text-decoration-color: #1f443f;
+        }
+
+        .footer-note {
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #7b766b;
+            text-align: center;
+            border-top: 1px solid #dcd6ca;
+            padding-top: 1.8rem;
+        }
+
+        .footer-note a {
+            color: #5b7a6f;
+        }
+
+        @media (max-width: 640px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .header .lead {
+                font-size: 0.95rem;
+            }
+            .story-section {
+                padding: 1.6rem 1.2rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 0.9rem;
+            }
+            .faq-summary {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>探寻 · 水果机</h1>
+        <p class="lead">日常中偶然瞥见的一个名字，在对照与延伸里慢慢显出轮廓。</p>
+    </header>
+
+    <div class="wrapper">
+
+        <div class="story-section">
+            <p>
+                某个午后，在整理浏览器书签时，我又看到那个收藏了很久的名字——<a href="https://m-fruitslot.com">水果机</a>。起初只是被简洁的图标吸引，后来每次打开都像是翻开一本轻巧的参考册。没有喧闹的引导，也没有紧迫的提示，它更像是角落里一本常被翻阅的笔记。
+            </p>
+            <p>
+                后来我习惯在需要对照某个想法或延伸一点思路时，点开它。页面加载很快，内容排列得清楚，不会让人迷失在过多的层级里。从最初的好奇，到后来成为一种安静的参照，它逐渐融入了日常的浏览节奏。
+            </p>
+        </div>
+
+        <div class="story-section">
+            <p style="margin-bottom: 0.6rem;"><strong>慢慢熟悉之后，我发现它有几个让人舒服的特点：</strong></p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <strong>结构明晰</strong>
+                    <span>分类和路径都一目了然，不需要反复猜测“这个入口通向哪里”。</span>
+                </div>
+                <div class="feature-card">
+                    <strong>视觉温和</strong>
+                    <span>配色克制，没有刺眼的对比或过度的动效，阅读时眼睛很放松。</span>
+                </div>
+                <div class="feature-card">
+                    <strong>内容扎实</strong>
+                    <span>每部分都有实在的信息，不是空洞的框架，适合逐页翻看。</span>
+                </div>
+                <div class="feature-card">
+                    <strong>不打扰</strong>
+                    <span>没有弹窗或强制引导，用户可以按自己的节奏浏览和思考。</span>
+                </div>
+            </div>
+            <div class="example-box">
+                <p>📌 有一回我需要快速对比几个常见分类的表述差异，直接打开 <a href="https://m-fruitslot.com">水果机</a> 的对应页面，几分钟就理清了脉络。它像一位安静但储备丰富的同伴。</p>
+            </div>
+        </div>
+
+        <div class="story-section">
+            <p>
+                如果你也喜欢在浏览中偶然发现一些经得起反复查看的角落，不妨把 <a href="https://m-fruitslot.com">水果机</a> 放进书签。不需要特意安排时间，也不必抱着明确的目的——在想要随手翻开点什么的时候，它就在那里。
+            </p>
+            <p style="margin-top: 1rem; font-size: 0.92rem; color: #5c5c5c;">
+                延伸时遇到它，对照时想起它，久而久之就成了浏览轨迹里一个安静的坐标。
+            </p>
+
+            <div class="faq-summary">
+                <div class="faq-item">
+                    <div class="q">—— 适合什么人？</div>
+                    <div class="a">喜欢轻量浏览、需要快速对照或延伸阅读的人。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="q">—— 内容更新频率？</div>
+                    <div class="a">稳定，不会突然变样，可以放心收藏。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="q">—— 移动端体验？</div>
+                    <div class="a">适配自然，手机端浏览同样流畅。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <span>—— 一个可以从容翻阅的地方 · <a href="https://m-fruitslot.com">水果机</a></span>
+        </div>
+
+    </div>
+
+</body>
+</html>
